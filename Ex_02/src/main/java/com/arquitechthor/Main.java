@@ -2,24 +2,34 @@ package com.arquitechthor;
 
 import java.util.*;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Main {
-    public static String FindIntersection(String[] strArr) {
-        Stream<String> rightArray =
-                Pattern.compile(",").splitAsStream(strArr[0]);
+    public static String findIntersection(String[] strArr) {
+        Stream <Integer> leftElement =
+                Pattern.compile(",").splitAsStream(strArr[0].replace(" ",""))
+                        .map(Integer::parseInt);
 
-        rightArray.forEach(System.out::println);
+        Set <Integer> rightElement =
+                Pattern.compile(",").splitAsStream(strArr[1].replace(" ",""))
+                        .map(Integer::parseInt).collect(Collectors.toSet());
 
-        //Stream<String> leftArray = strArr[1];
+        List <Integer> result =
+                leftElement.filter(rightElement::contains).toList();
 
+        if (result.isEmpty())
+        {
+            return "false";
+        }
 
-        return strArr[0];
+        return result.toString();
     }
 
     public static void main (String[] args) {
         // keep this function call here
-        Scanner s = new Scanner(System.in);
-        //System.out.print(FindIntersection(s.nextLine()));
+        String[] testCase = new String[] {"1, 3, 4, 7, 13", "1, 2, 4, 13, 15"};
+
+        System.out.print(findIntersection(testCase));
     }
 }
