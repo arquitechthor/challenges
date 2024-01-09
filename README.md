@@ -5,3 +5,4 @@ Challenges:
  - **Ex_02**: Find Intersection - From Coderbyte
  - **Ex_03**: If-Else - From HackerRank
  - **Ex_04**: Longest Word - From Coderbyte
+ - **Ex_04**: Java Stdin and Stdout II - From HackerRank
