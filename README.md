@@ -8,3 +8,4 @@ Challenges:
  - **Ex_05**: Java Stdin and Stdout II - From HackerRank
  - **Ex_06**: Java Loops I - From HackerRank
  - **Ex_07**: Java Loops II - From HackerRank
+ - **Ex_08**: Codeland Username Validation - From Coderbyte
