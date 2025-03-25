@@ -1,4 +1,4 @@
-# Code Challenges
+# Code Challenges (Live Code like)
 
 Code Challenges are useful exercises to master because they are used as recruitment tools and also to improve professionally as a software developer.
 
